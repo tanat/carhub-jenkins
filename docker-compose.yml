@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    jenkins:
+        build: ./docker/jenkins/
+        ports:
+            - "8787:8080"
+        volumes:
+            - ./jenkins_home:/var/jenkins_home
+        env_file: .env
